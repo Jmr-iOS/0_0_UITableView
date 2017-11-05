@@ -10,12 +10,12 @@ import UIKit
 
 class UICustomTableView : UITableView {
     
-    var verbose : Bool = true;
+    @objc var verbose : Bool = true;
 
-    var myCustomCells : [UICustomTableViewCell] = [UICustomTableViewCell]();
+    @objc var myCustomCells : [UICustomTableViewCell] = [UICustomTableViewCell]();
 
     
-    init(frame: CGRect, style: UITableViewStyle, items :[String]) {
+    @objc init(frame: CGRect, style: UITableViewStyle, items :[String]) {
         super.init(frame:frame, style:style);
         
         self.register(UICustomTableViewCell.self, forCellReuseIdentifier: "cell");          //I have no idea why we do this
@@ -44,7 +44,7 @@ class UICustomTableView : UITableView {
     }
     
     
-    func addNewCell(_ cellString : String) {
+    @objc func addNewCell(_ cellString : String) {
     
         
         let newCell : UICustomTableViewCell = UICustomTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "eww?");
@@ -59,7 +59,7 @@ class UICustomTableView : UITableView {
     }
     
     //self.timerTable.removeCell(indexPath.item);
-    func removeCell(_ index : Int) {
+    @objc func removeCell(_ index : Int) {
         
         myCustomCells.remove(at: index);
         
@@ -76,14 +76,14 @@ class UICustomTableView : UITableView {
     }
     
     
-    func getCell(_ index: Int) -> UICustomTableViewCell {
+    @objc func getCell(_ index: Int) -> UICustomTableViewCell {
     
         let cell : UICustomTableViewCell = self.myCustomCells[index];
 
         return cell;
     }
     
-    func getCellCount() -> Int {
+    @objc func getCellCount() -> Int {
         return myCustomCells.count;
     }
 

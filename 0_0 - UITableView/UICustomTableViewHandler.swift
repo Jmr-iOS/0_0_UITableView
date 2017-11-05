@@ -12,12 +12,12 @@ import UIKit
 
 class UICustomTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate {
    
-    let verbose : Bool = true;
+    @objc let verbose : Bool = true;
     
-    var timerTable : UICustomTableView!;
+    @objc var timerTable : UICustomTableView!;
     
         
-    init(items: [String], timerTable : UICustomTableView) {
+    @objc init(items: [String], timerTable : UICustomTableView) {
 
         self.timerTable = timerTable;
         
@@ -121,17 +121,17 @@ class UICustomTableViewHandler : NSObject, UITableViewDataSource, UITableViewDel
 /************************************************************************************************************************************/
 /*                                                        Helpers                                                                   */
 /************************************************************************************************************************************/
-    func getCharName(_ i : Int) -> String {
+    @objc func getCharName(_ i : Int) -> String {
         return String(describing: UnicodeScalar(i + Int(("A" as UnicodeScalar).value)));
     }
     
     
-    func getRowLabel(_ charName : String, index: Int) -> String {
+    @objc func getRowLabel(_ charName : String, index: Int) -> String {
         return String(format: "Item '%@' (%d)", charName, index);
     }
     
     
-    func addNewRow() {
+    @objc func addNewRow() {
         
         let charName : String = self.getCharName(self.timerTable.getCellCount());
         

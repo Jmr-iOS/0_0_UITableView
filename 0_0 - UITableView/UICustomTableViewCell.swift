@@ -8,9 +8,9 @@ import UIKit
 
 class UICustomTableViewCell : UITableViewCell {
     
-    let verbose : Bool = false;
+    @objc let verbose : Bool = false;
     
-    let cellSelectionFade : Bool = false;
+    @objc let cellSelectionFade : Bool = false;
 
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
