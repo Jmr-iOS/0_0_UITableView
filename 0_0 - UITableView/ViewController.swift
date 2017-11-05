@@ -237,7 +237,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         let currCell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell") as UITableViewCell!;
         
-        if(verbose){ print("Hello Standard Cell at index \(indexPath)- '\(currCell.textLabel!.text)'"); }
+        if(verbose){ print("Hello Standard Cell at index \(indexPath)- '\(currCell.textLabel!.text!)'"); }
 
         
         
