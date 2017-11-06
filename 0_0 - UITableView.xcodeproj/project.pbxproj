@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D0385EB61C243539009DF0BA /* UICustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0385EB51C243539009DF0BA /* UICustomTableView.swift */; };
-		D0385EB81C24354D009DF0BA /* UICustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0385EB71C24354D009DF0BA /* UICustomTableViewCell.swift */; };
-		D0385EBA1C244222009DF0BA /* UICustomTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0385EB91C244222009DF0BA /* UICustomTableViewHandler.swift */; };
+		D0026A491FB126F00015006D /* UICustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0026A461FB126F00015006D /* UICustomTableView.swift */; };
+		D0026A4A1FB126F00015006D /* UICustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0026A471FB126F00015006D /* UICustomTableViewCell.swift */; };
+		D0026A4B1FB126F00015006D /* UICustomTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0026A481FB126F00015006D /* UICustomTableViewHandler.swift */; };
 		D039B4BA1BF4D7950024005F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039B4B91BF4D7950024005F /* AppDelegate.swift */; };
 		D039B4BC1BF4D7950024005F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039B4BB1BF4D7950024005F /* ViewController.swift */; };
 		D039B4C11BF4D7950024005F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D039B4C01BF4D7950024005F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D0385EB51C243539009DF0BA /* UICustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomTableView.swift; sourceTree = "<group>"; };
-		D0385EB71C24354D009DF0BA /* UICustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomTableViewCell.swift; sourceTree = "<group>"; };
-		D0385EB91C244222009DF0BA /* UICustomTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomTableViewHandler.swift; sourceTree = "<group>"; };
+		D0026A461FB126F00015006D /* UICustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICustomTableView.swift; path = "../../../../../Ref/Libraries/Programmatic UI/UICustomTableView.swift"; sourceTree = "<group>"; };
+		D0026A471FB126F00015006D /* UICustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICustomTableViewCell.swift; path = "../../../../../Ref/Libraries/Programmatic UI/UICustomTableViewCell.swift"; sourceTree = "<group>"; };
+		D0026A481FB126F00015006D /* UICustomTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICustomTableViewHandler.swift; path = "../../../../../Ref/Libraries/Programmatic UI/UICustomTableViewHandler.swift"; sourceTree = "<group>"; };
 		D039B4B61BF4D7950024005F /* 0_0 - UITableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "0_0 - UITableView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D039B4B91BF4D7950024005F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D039B4BB1BF4D7950024005F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,9 +37,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0026A3F1FB126750015006D /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				D0026A461FB126F00015006D /* UICustomTableView.swift */,
+				D0026A471FB126F00015006D /* UICustomTableViewCell.swift */,
+				D0026A481FB126F00015006D /* UICustomTableViewHandler.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
 		D039B4AD1BF4D7950024005F = {
 			isa = PBXGroup;
 			children = (
+				D0026A3F1FB126750015006D /* Lib */,
 				D039B4B81BF4D7950024005F /* 0_0 - UITableView */,
 			);
 			sourceTree = "<group>";
@@ -58,9 +69,6 @@
 			children = (
 				D039B4B91BF4D7950024005F /* AppDelegate.swift */,
 				D039B4BB1BF4D7950024005F /* ViewController.swift */,
-				D0385EB51C243539009DF0BA /* UICustomTableView.swift */,
-				D0385EB71C24354D009DF0BA /* UICustomTableViewCell.swift */,
-				D0385EB91C244222009DF0BA /* UICustomTableViewHandler.swift */,
 				D039B4B71BF4D7950024005F /* Products */,
 				D039B4C01BF4D7950024005F /* Assets.xcassets */,
 				D039B4C51BF4D7950024005F /* Info.plist */,
@@ -141,9 +149,9 @@
 			files = (
 				D039B4BC1BF4D7950024005F /* ViewController.swift in Sources */,
 				D039B4BA1BF4D7950024005F /* AppDelegate.swift in Sources */,
-				D0385EBA1C244222009DF0BA /* UICustomTableViewHandler.swift in Sources */,
-				D0385EB81C24354D009DF0BA /* UICustomTableViewCell.swift in Sources */,
-				D0385EB61C243539009DF0BA /* UICustomTableView.swift in Sources */,
+				D0026A4A1FB126F00015006D /* UICustomTableViewCell.swift in Sources */,
+				D0026A4B1FB126F00015006D /* UICustomTableViewHandler.swift in Sources */,
+				D0026A491FB126F00015006D /* UICustomTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
