@@ -41,7 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     let numItems_init  : Int = 16;
     
-    let mode : Mode = .MODE_DIRECT;
+    let mode : Mode = .MODE_CUSTOM;
     
     var items: [String]!;
     
