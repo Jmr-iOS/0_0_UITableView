@@ -16,22 +16,22 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @objc var verbose : Bool = false;
+    var verbose : Bool = false;
 
-    @objc let numItems_init  : Int = 16;
+    let numItems_init  : Int = 16;
     
-    @objc var items: [String]!;
+    var items: [String]!;
     
-    @objc var tableView          : UITableView!;
-    @objc var customTable        : UICustomTableView!;
-    @objc var customTableHandler : UICustomTableViewHandler!;
+    var tableView          : UITableView!;
+    var customTable        : UICustomTableView!;
+    var customTableHandler : UICustomTableViewHandler!;
     
     //options
-    @objc var cellBordersVisible : Bool = true;
-    @objc var usesCustomTiles    : Bool = false;
+    var cellBordersVisible : Bool = true;
+    var usesCustomTiles    : Bool = false;
     
     //std table config
-    @objc let cellSelectionFade : Bool = true;
+    let cellSelectionFade : Bool = true;
 
     
     override func viewDidLoad() {
@@ -54,7 +54,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
 
-    @objc func addCustomTable() {
+    func addCustomTable() {
     
         if(verbose){ print("ViewController.addCustomTable():      adding a custom table"); }
         
@@ -84,7 +84,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
-    @objc func addStandardTable() {
+    func addStandardTable() {
 
         if(verbose){ print("ViewController.addStandardTable():      adding a standard table"); }
 
@@ -115,10 +115,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
 
-/****************************************************************************************************************************************/
-/*                                                         Helpers                                                                      */
-/****************************************************************************************************************************************/
-    @objc func loadItems() {
+/************************************************************************************************************************************/
+/*                                                         Helpers                                                                  */
+/************************************************************************************************************************************/
+    func loadItems() {
 
         if(verbose){ print("ViewController.loadItems():    Items are loaded"); }
         
@@ -135,17 +135,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
-    @objc func getCharName(_ i : Int) -> String {
+    func getCharName(_ i : Int) -> String {
         return String(describing: UnicodeScalar(i + Int(("A" as UnicodeScalar).value)));
     }
     
     
-    @objc func getRowLabel(_ charName : String, index: Int) -> String {
+    func getRowLabel(_ charName : String, index: Int) -> String {
         return String(format: "Item '%@' (%d)", charName, index);
     }
     
     
-    @objc func addNewRow() {
+    func addNewRow() {
         
         let charName : String = self.getCharName(items.count);
         
@@ -159,7 +159,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
-    @objc func removeLastRow(_ useFadeAndSlide : Bool) {
+    func removeLastRow(_ useFadeAndSlide : Bool) {
 
         let lastRowIndex : Int = items.count-1;
         
@@ -281,7 +281,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return;
     }
     
-    @objc func setReordering() {
+    func setReordering() {
 
             for i in 0..<self.items.count {
                 print("//->" + self.items[i]);
