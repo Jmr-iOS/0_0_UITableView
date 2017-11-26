@@ -8,7 +8,15 @@
  *  @created    11/5/17
  *  @last rev   11/26/17
  *
- *  @todo fix the fade transition in std remove to "fade to beneath the table"
+ *  @section    Description
+ *      to be listed
+ *
+ *  @section    Instructions
+ *      There are a few options:
+ *      - Direct Table geration (MODE_DIRECT)       <- very long-winded, verbose & error prone if needed
+ *      - Custom Table direct use (MODE_CUSTOM)     <- clean & quick, general recommendation                            (Rec 1)
+ *      - Manual creation ()                        <- Copy UICustomTableView, etc. to project & rename
+ *      - Manual extension ()                       <- Manual creation using 'extends' for each class modified          (Rec 2)
  *
  *  @section    Ref
  *      http://viperxgames.blogspot.com/2014/11/add-uitableview-programmatically-in.html
@@ -18,8 +26,8 @@
  *      (table re-ordering) http://swiftdeveloperblog.com/uitableviewcontroller-rearrange-or-reorder-table-cells-example-in-swift/
  *
  *  @section    Opens
- *      see what routines in this file pre-exist in subclasses and can be ignored
- *      Use UICustomTableViewHandler
+ *      fix the fade transition in std remove to "fade to beneath the table"
+ *      list description in file header
  *
  *  @section    Legal Disclaimer
  *      All contents of this source file and/or any other Jaostech related source files are the explicit property on Jaostech
