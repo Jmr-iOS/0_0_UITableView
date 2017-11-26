@@ -14,6 +14,7 @@
 		D0B367831FCB4C5300E451CF /* UICustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B367801FCB4C5300E451CF /* UICustomTableView.swift */; };
 		D0B367841FCB4C5300E451CF /* UICustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B367811FCB4C5300E451CF /* UICustomTableViewCell.swift */; };
 		D0B367851FCB4C5300E451CF /* UICustomTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B367821FCB4C5300E451CF /* UICustomTableViewHandler.swift */; };
+		D0B367871FCB4F9200E451CF /* BigTableDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B367861FCB4F9200E451CF /* BigTableDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D0B367801FCB4C5300E451CF /* UICustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICustomTableView.swift; path = "../../../../../Ref/Libraries/Programmatic UI/UICustomTableView.swift"; sourceTree = "<group>"; };
 		D0B367811FCB4C5300E451CF /* UICustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICustomTableViewCell.swift; path = "../../../../../Ref/Libraries/Programmatic UI/UICustomTableViewCell.swift"; sourceTree = "<group>"; };
 		D0B367821FCB4C5300E451CF /* UICustomTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICustomTableViewHandler.swift; path = "../../../../../Ref/Libraries/Programmatic UI/UICustomTableViewHandler.swift"; sourceTree = "<group>"; };
+		D0B367861FCB4F9200E451CF /* BigTableDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigTableDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				D039B4B91BF4D7950024005F /* AppDelegate.swift */,
 				D039B4BB1BF4D7950024005F /* ViewController.swift */,
+				D0B367861FCB4F9200E451CF /* BigTableDemo.swift */,
 			);
 			path = "0_0 - UITableView";
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				D0B367851FCB4C5300E451CF /* UICustomTableViewHandler.swift in Sources */,
 				D0B2C69C1FCB403700ACBC9C /* Stdcomments.swift in Sources */,
 				D0B367841FCB4C5300E451CF /* UICustomTableViewCell.swift in Sources */,
+				D0B367871FCB4F9200E451CF /* BigTableDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

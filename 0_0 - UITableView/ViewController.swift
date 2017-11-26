@@ -39,7 +39,7 @@ import UIKit
 enum Mode {
     case MODE_DIRECT;
     case MODE_CUSTOM;
-    //...
+    case MODE_BIG;
 }
 
 
@@ -85,6 +85,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             case .MODE_CUSTOM:
                 self.addCustomTable();
                 break;
+            case .MODE_BIG:
+                self.addBigTable();
+                break;
+            
         }
         
         //Exit
@@ -93,6 +97,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return;
     }
 
+    
+    /********************************************************************************************************************************/
+    /** @fcn        addBigTable()
+     *  @brief      x
+     *  @details    x
+     *
+     *  @section    Procedure
+     *      passed a view on init, table gen there
+     */
+    /********************************************************************************************************************************/
+    func addBigTable() {
+        
+        if(verbose){ print("ViewController.addBigTable():      adding a big table"); }
+        
+        BigTableDemo.genBigTable(view: self.view);
+        
+        if(verbose){ print("ViewController.addBigTable():      big table added succesfully"); }
+        
+        return;
+    }
 
     /********************************************************************************************************************************/
     /** @fcn        addCustomTable()
@@ -101,7 +125,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
      */
     /********************************************************************************************************************************/
     func addCustomTable() {
-    
+
         if(verbose){ print("ViewController.addCustomTable():      adding a custom table"); }
         
         customTable = UICustomTableView(frame:self.view.frame, style:UITableViewStyle.plain, items:items);
