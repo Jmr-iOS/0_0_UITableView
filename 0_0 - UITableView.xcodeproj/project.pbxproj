@@ -50,9 +50,9 @@
 		D039B4AD1BF4D7950024005F = {
 			isa = PBXGroup;
 			children = (
+				D039B4B81BF4D7950024005F /* 0_0 - UITableView */,
 				D0B2C6971FCB3DD000ACBC9C /* Lib */,
 				D01AC7781FCB1A0800D98142 /* Base */,
-				D039B4B81BF4D7950024005F /* 0_0 - UITableView */,
 			);
 			sourceTree = "<group>";
 		};
