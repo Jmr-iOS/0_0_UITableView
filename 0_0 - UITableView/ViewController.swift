@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var items: [String]!;
     
-    var tableView          : UITableView!;
+    var tableView          : UITableView!;                                              /* uses either based on mode                */
     var customTable        : UICustomTableView!;
     var customTableHandler : UICustomTableViewHandler!;
     
@@ -99,7 +99,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         customTable = UICustomTableView(frame:self.view.frame, style:UITableViewStyle.plain, items:items);
 
         //add the handler
-        customTableHandler = UICustomTableViewHandler(items: items, timerTable: customTable);
+        customTableHandler = UICustomTableViewHandler(items: items, table: customTable);
 
         customTable.delegate   = customTableHandler;                                    /* Set both to handle clicks & provide data */
         customTable.dataSource = customTableHandler;
