@@ -1,7 +1,7 @@
 /************************************************************************************************************************************/
-/** @file       AppDelegate.swift
+/** @file       ViewController.swift
  *  @project    0_0 - UITableView
- *  @brief      x
+ *  @brief      give example of use pf TableView, direct or through custom classes
  *  @details    x
  *
  *  @author     Justin Reina, Firmware Engineer, Jaostech
@@ -19,6 +19,7 @@
  *
  *  @section    Opens
  *      see what routines in this file pre-exist in subclasses and can be ignored
+ *      Use UICustomTableViewHandler
  *
  *  @section    Legal Disclaimer
  *      All contents of this source file and/or any other Jaostech related source files are the explicit property on Jaostech
@@ -27,12 +28,20 @@
 /************************************************************************************************************************************/
 import UIKit
 
+enum Mode {
+    case MODE_DIRECT;
+    case MODE_CUSTOM;
+    //...
+}
+
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var verbose : Bool = false;
 
     let numItems_init  : Int = 16;
+    
+    let mode : Mode = .MODE_DIRECT;
     
     var items: [String]!;
     
@@ -42,7 +51,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //options
     var cellBordersVisible : Bool = true;
-    var usesCustomTiles    : Bool = false;
+    var usesCustomTiles    : Bool = true;
     
     //std table config
     let cellSelectionFade : Bool = true;
@@ -61,10 +70,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         self.loadItems();
         
-        if(usesCustomTiles == true) {
-            self.addCustomTable();
-        } else {
-            self.addStandardTable();
+        switch(self.mode) {
+            case .MODE_DIRECT:
+                self.addStandardTable();
+                break;
+            case .MODE_CUSTOM:
+                self.addCustomTable();
+                break;
         }
         
         //Exit
@@ -78,36 +90,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     /** @fcn        addCustomTable()
      *  @brief      x
      *  @details    x
-     *
-     *  @section    Purpose
-     *      x
-     *
-     *  @param        [in]    name    descrip
-     *
-     *  @param        [out]    name    descrip
-     *
-     *  @return        (type) descrip
-     *
-     *  @pre        x
-     *
-     *  @post        x
-     *
-     *  @section    Operation
-     *        x
-     *
-     *  @section    Opens
-     *      x
-     *
-     *  @section    Hazards & Risks
-     *      x
-     *
-     *    @section    Todo
-     *        x
-     *
-     *  @section    Timing
-     *      x
-     *
-     *  @note        x
      */
     /********************************************************************************************************************************/
     func addCustomTable() {
@@ -119,7 +101,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //add the handler
         customTableHandler = UICustomTableViewHandler(items: items, timerTable: customTable);
 
-        customTable.delegate   = customTableHandler;                                            //Set both to handle clicks & provide data
+        customTable.delegate   = customTableHandler;                                    /* Set both to handle clicks & provide data */
         customTable.dataSource = customTableHandler;
         
         //init the table
