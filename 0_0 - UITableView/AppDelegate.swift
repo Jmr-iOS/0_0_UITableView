@@ -26,7 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    /********************************************************************************************************************************/
+    /** @fcn    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:                         */
+    /*                           [UIApplicationLaunchOptionsKey: Any]?) -> Bool                                                     */
+    /*  @brief  return the elapsed time for the log AND active timer                                                                */
+    /********************************************************************************************************************************/
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         self.window = UIWindow.init(frame: UIScreen.main.bounds);

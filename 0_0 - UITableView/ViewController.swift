@@ -18,7 +18,7 @@
  *      (table re-ordering) http://swiftdeveloperblog.com/uitableviewcontroller-rearrange-or-reorder-table-cells-example-in-swift/
  *
  *  @section    Opens
- *      none current
+ *      see what routines in this file pre-exist in subclasses and can be ignored
  *
  *  @section    Legal Disclaimer
  *      All contents of this source file and/or any other Jaostech related source files are the explicit property on Jaostech
@@ -47,7 +47,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //std table config
     let cellSelectionFade : Bool = true;
 
-    
+
+    /********************************************************************************************************************************/
+    /** @fcn        override viewDidLoad()
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     override func viewDidLoad() {
         super.viewDidLoad();
         
@@ -68,6 +74,42 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
 
+    /********************************************************************************************************************************/
+    /** @fcn        addCustomTable()
+     *  @brief      x
+     *  @details    x
+     *
+     *  @section    Purpose
+     *      x
+     *
+     *  @param        [in]    name    descrip
+     *
+     *  @param        [out]    name    descrip
+     *
+     *  @return        (type) descrip
+     *
+     *  @pre        x
+     *
+     *  @post        x
+     *
+     *  @section    Operation
+     *        x
+     *
+     *  @section    Opens
+     *      x
+     *
+     *  @section    Hazards & Risks
+     *      x
+     *
+     *    @section    Todo
+     *        x
+     *
+     *  @section    Timing
+     *      x
+     *
+     *  @note        x
+     */
+    /********************************************************************************************************************************/
     func addCustomTable() {
     
         if(verbose){ print("ViewController.addCustomTable():      adding a custom table"); }
@@ -98,6 +140,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
+    /********************************************************************************************************************************/
+    /** @fcn        addStandardTable()
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     func addStandardTable() {
 
         if(verbose){ print("ViewController.addStandardTable():      adding a standard table"); }
@@ -132,6 +180,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 /************************************************************************************************************************************/
 /*                                                         Helpers                                                                  */
 /************************************************************************************************************************************/
+    
+    
+    /********************************************************************************************************************************/
+    /** @fcn        loadItems()
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     func loadItems() {
 
         if(verbose){ print("ViewController.loadItems():    Items are loaded"); }
@@ -149,16 +205,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
+    /********************************************************************************************************************************/
+    /** @fcn        getCharName(_ i : Int) -> String
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     func getCharName(_ i : Int) -> String {
         return String(describing: UnicodeScalar(i + Int(("A" as UnicodeScalar).value)));
     }
     
     
+    /********************************************************************************************************************************/
+    /** @fcn        getRowLabel(_ charName : String, index: Int) -> String
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     func getRowLabel(_ charName : String, index: Int) -> String {
         return String(format: "Item '%@' (%d)", charName, index);
     }
     
     
+    /********************************************************************************************************************************/
+    /** @fcn        addNewRow()
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     func addNewRow() {
         
         let charName : String = self.getCharName(items.count);
@@ -173,6 +247,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
+    /********************************************************************************************************************************/
+    /** @fcn        removeLastRow(_ useFadeAndSlide : Bool)
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     func removeLastRow(_ useFadeAndSlide : Bool) {
 
         let lastRowIndex : Int = items.count-1;
@@ -204,10 +284,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return;
     }
     
+
+/************************************************************************************************************************************/
+/*                                    UITableViewDataSource, UITableViewDelegate Interfaces                                         */
+/************************************************************************************************************************************/
     
-/****************************************************************************************************************************************/
-/*                                      UITableViewDataSource, UITableViewDelegate Interfaces                                           */
-/****************************************************************************************************************************************/
+    
+    /********************************************************************************************************************************/
+    /** @fcn        tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if(verbose){ print("ViewController.tableView():         The table will now have \(items.count), cause I just said so..."); }
@@ -216,6 +304,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     
+    /********************************************************************************************************************************/
+    /** @fcn        tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         if(verbose){ print("ViewController.tableView():         adding a cell"); }
@@ -224,9 +318,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let newTextValue:String = self.items[(indexPath as NSIndexPath).row];
         
-        cell?.textLabel?.text = newTextValue;                                                //text
-        cell?.textLabel?.font = UIFont(name: (cell?.textLabel!.font.fontName)!, size: 20);       //font
-        cell?.textLabel?.textAlignment = NSTextAlignment.center;                             //alignment
+        cell?.textLabel?.text = newTextValue;                                                   //text
+        cell?.textLabel?.font = UIFont(name: (cell?.textLabel!.font.fontName)!, size: 20);      //font
+        cell?.textLabel?.textAlignment = NSTextAlignment.center;                                //alignment
         
         
         if(self.cellSelectionFade == true) {
@@ -243,6 +337,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
+    /********************************************************************************************************************************/
+    /** @fcn        tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
         if(verbose){ print("ViewController.tableView():         handling a cell tap of \((indexPath as NSIndexPath).item)"); }
@@ -255,9 +355,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         
         
-        /********************************************************************************************************************************/
-        /* scroll to the top or change the bar color                                                                                    */
-        /********************************************************************************************************************************/
+        /****************************************************************************************************************************/
+        /* scroll to the top or change the bar color                                                                                */
+        /****************************************************************************************************************************/
         switch((indexPath as NSIndexPath).row) {
         case (0):
             print("top selected. Scrolling to the bottom!");
@@ -295,6 +395,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return;
     }
     
+    
+    /********************************************************************************************************************************/
+    /** @fcn        func setReordering()
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     func setReordering() {
 
             for i in 0..<self.items.count {
@@ -304,11 +411,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
             self.tableView.setEditing(true, animated: true);
 
-        
         return;
     }
     
+    
 //THE KEY
+    /********************************************************************************************************************************/
+    /** @fcn        tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath)
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
 
         //you'll have to move it yourself as well
@@ -320,14 +433,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return;
     }
     
+    
+    /********************************************************************************************************************************/
+    /** @fcn        tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true;
     }
     
+    
+    /********************************************************************************************************************************/
+    /** @fcn        tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
         return UITableViewCellEditingStyle.none;            //If you say .Delete here it lets you delete too. .None is just reorder
     }
-    
 //END THE KEY
 
     
