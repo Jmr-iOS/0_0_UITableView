@@ -47,9 +47,20 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
+		D01AC7781FCB1A0800D98142 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D039B4B71BF4D7950024005F /* Products */,
+				D039B4C01BF4D7950024005F /* Assets.xcassets */,
+				D039B4C51BF4D7950024005F /* Info.plist */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		D039B4AD1BF4D7950024005F = {
 			isa = PBXGroup;
 			children = (
+				D01AC7781FCB1A0800D98142 /* Base */,
 				D0026A3F1FB126750015006D /* Lib */,
 				D039B4B81BF4D7950024005F /* 0_0 - UITableView */,
 			);
@@ -61,7 +72,7 @@
 				D039B4B61BF4D7950024005F /* 0_0 - UITableView.app */,
 			);
 			name = Products;
-			path = ..;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		D039B4B81BF4D7950024005F /* 0_0 - UITableView */ = {
@@ -69,9 +80,6 @@
 			children = (
 				D039B4B91BF4D7950024005F /* AppDelegate.swift */,
 				D039B4BB1BF4D7950024005F /* ViewController.swift */,
-				D039B4B71BF4D7950024005F /* Products */,
-				D039B4C01BF4D7950024005F /* Assets.xcassets */,
-				D039B4C51BF4D7950024005F /* Info.plist */,
 			);
 			path = "0_0 - UITableView";
 			sourceTree = "<group>";
