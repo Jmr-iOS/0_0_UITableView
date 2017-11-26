@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D0026A491FB126F00015006D /* UICustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0026A461FB126F00015006D /* UICustomTableView.swift */; };
-		D0026A4A1FB126F00015006D /* UICustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0026A471FB126F00015006D /* UICustomTableViewCell.swift */; };
-		D0026A4B1FB126F00015006D /* UICustomTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0026A481FB126F00015006D /* UICustomTableViewHandler.swift */; };
 		D039B4BA1BF4D7950024005F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039B4B91BF4D7950024005F /* AppDelegate.swift */; };
 		D039B4BC1BF4D7950024005F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039B4BB1BF4D7950024005F /* ViewController.swift */; };
 		D039B4C11BF4D7950024005F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D039B4C01BF4D7950024005F /* Assets.xcassets */; };
+		D0B2C6981FCB3E7C00ACBC9C /* UICustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B2C6941FCB3DBD00ACBC9C /* UICustomTableView.swift */; };
+		D0B2C6991FCB3E7C00ACBC9C /* UICustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B2C6961FCB3DBD00ACBC9C /* UICustomTableViewCell.swift */; };
+		D0B2C69A1FCB3E7C00ACBC9C /* UICustomTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B2C6951FCB3DBD00ACBC9C /* UICustomTableViewHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D0026A461FB126F00015006D /* UICustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICustomTableView.swift; path = "../../../../../Ref/Libraries/Programmatic UI/UICustomTableView.swift"; sourceTree = "<group>"; };
-		D0026A471FB126F00015006D /* UICustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICustomTableViewCell.swift; path = "../../../../../Ref/Libraries/Programmatic UI/UICustomTableViewCell.swift"; sourceTree = "<group>"; };
-		D0026A481FB126F00015006D /* UICustomTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICustomTableViewHandler.swift; path = "../../../../../Ref/Libraries/Programmatic UI/UICustomTableViewHandler.swift"; sourceTree = "<group>"; };
 		D039B4B61BF4D7950024005F /* 0_0 - UITableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "0_0 - UITableView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D039B4B91BF4D7950024005F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D039B4BB1BF4D7950024005F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D039B4C01BF4D7950024005F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D039B4C51BF4D7950024005F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0B2C6941FCB3DBD00ACBC9C /* UICustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomTableView.swift; sourceTree = "<group>"; };
+		D0B2C6951FCB3DBD00ACBC9C /* UICustomTableViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UICustomTableViewHandler.swift; path = ../UICustomTableViewHandler.swift; sourceTree = "<group>"; };
+		D0B2C6961FCB3DBD00ACBC9C /* UICustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UICustomTableViewCell.swift; path = ../UICustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,16 +37,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D0026A3F1FB126750015006D /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				D0026A461FB126F00015006D /* UICustomTableView.swift */,
-				D0026A471FB126F00015006D /* UICustomTableViewCell.swift */,
-				D0026A481FB126F00015006D /* UICustomTableViewHandler.swift */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
 		D01AC7781FCB1A0800D98142 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -60,8 +50,8 @@
 		D039B4AD1BF4D7950024005F = {
 			isa = PBXGroup;
 			children = (
+				D0B2C6971FCB3DD000ACBC9C /* Lib */,
 				D01AC7781FCB1A0800D98142 /* Base */,
-				D0026A3F1FB126750015006D /* Lib */,
 				D039B4B81BF4D7950024005F /* 0_0 - UITableView */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +72,16 @@
 				D039B4BB1BF4D7950024005F /* ViewController.swift */,
 			);
 			path = "0_0 - UITableView";
+			sourceTree = "<group>";
+		};
+		D0B2C6971FCB3DD000ACBC9C /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				D0B2C6941FCB3DBD00ACBC9C /* UICustomTableView.swift */,
+				D0B2C6961FCB3DBD00ACBC9C /* UICustomTableViewCell.swift */,
+				D0B2C6951FCB3DBD00ACBC9C /* UICustomTableViewHandler.swift */,
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,11 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B2C6981FCB3E7C00ACBC9C /* UICustomTableView.swift in Sources */,
+				D0B2C6991FCB3E7C00ACBC9C /* UICustomTableViewCell.swift in Sources */,
+				D0B2C69A1FCB3E7C00ACBC9C /* UICustomTableViewHandler.swift in Sources */,
 				D039B4BC1BF4D7950024005F /* ViewController.swift in Sources */,
 				D039B4BA1BF4D7950024005F /* AppDelegate.swift in Sources */,
-				D0026A4A1FB126F00015006D /* UICustomTableViewCell.swift in Sources */,
-				D0026A4B1FB126F00015006D /* UICustomTableViewHandler.swift in Sources */,
-				D0026A491FB126F00015006D /* UICustomTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +269,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HRCQBX7PVQ;
-				INFOPLIST_FILE = "0_0 - UITableView/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Base/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jaostech.0-0-uitableview";
@@ -283,7 +283,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HRCQBX7PVQ;
-				INFOPLIST_FILE = "0_0 - UITableView/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Base/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jaostech.0-0-uitableview";
