@@ -1,18 +1,32 @@
-//
-//  ViewController.swift
-//  0_0 - UITableView
-//
-//  @todo fix the fade transition in std remove to "fade to beneath the table"
-//
-//  URL:  http://viperxgames.blogspot.com/2014/11/add-uitableview-programmatically-in.html
-//  URL:  https://www.murage.ca/downcasting-in-swift-1-2-with-as-exclamation/
-//  URL:  http://www.tutorialspoint.com/ios/ios_ui_elements_tableview.htm
-//  URL:  (fade & slide) http://stackoverflow.com/questions/419472/have-a-reloaddata-for-a-uitableview-animate-when-changing
-//  URL:  (table re-ordering) http://swiftdeveloperblog.com/uitableviewcontroller-rearrange-or-reorder-table-cells-example-in-swift/
-//
-
-
+/************************************************************************************************************************************/
+/** @file       AppDelegate.swift
+ *  @project    0_0 - UITableView
+ *  @brief      x
+ *  @details    x
+ *
+ *  @author     Justin Reina, Firmware Engineer, Jaostech
+ *  @created    11/5/17
+ *  @last rev   11/26/17
+ *
+ *  @todo fix the fade transition in std remove to "fade to beneath the table"
+ *
+ *  @section    Ref
+ *      http://viperxgames.blogspot.com/2014/11/add-uitableview-programmatically-in.html
+ *      https://www.murage.ca/downcasting-in-swift-1-2-with-as-exclamation/
+ *      http://www.tutorialspoint.com/ios/ios_ui_elements_tableview.htm
+ *      (fade & slide) http://stackoverflow.com/questions/419472/have-a-reloaddata-for-a-uitableview-animate-when-changing
+ *      (table re-ordering) http://swiftdeveloperblog.com/uitableviewcontroller-rearrange-or-reorder-table-cells-example-in-swift/
+ *
+ *  @section    Opens
+ *      none current
+ *
+ *  @section    Legal Disclaimer
+ *      All contents of this source file and/or any other Jaostech related source files are the explicit property on Jaostech
+ *      Corporation. Do not distribute. Do not copy.
+ */
+/************************************************************************************************************************************/
 import UIKit
+
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 

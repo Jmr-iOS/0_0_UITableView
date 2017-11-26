@@ -13,6 +13,7 @@
 		D0B2C6981FCB3E7C00ACBC9C /* UICustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B2C6941FCB3DBD00ACBC9C /* UICustomTableView.swift */; };
 		D0B2C6991FCB3E7C00ACBC9C /* UICustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B2C6961FCB3DBD00ACBC9C /* UICustomTableViewCell.swift */; };
 		D0B2C69A1FCB3E7C00ACBC9C /* UICustomTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B2C6951FCB3DBD00ACBC9C /* UICustomTableViewHandler.swift */; };
+		D0B2C69C1FCB403700ACBC9C /* Stdcomments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B2C69B1FCB403700ACBC9C /* Stdcomments.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D0B2C6941FCB3DBD00ACBC9C /* UICustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomTableView.swift; sourceTree = "<group>"; };
 		D0B2C6951FCB3DBD00ACBC9C /* UICustomTableViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UICustomTableViewHandler.swift; path = ../UICustomTableViewHandler.swift; sourceTree = "<group>"; };
 		D0B2C6961FCB3DBD00ACBC9C /* UICustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UICustomTableViewCell.swift; path = ../UICustomTableViewCell.swift; sourceTree = "<group>"; };
+		D0B2C69B1FCB403700ACBC9C /* Stdcomments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stdcomments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,9 +42,10 @@
 		D01AC7781FCB1A0800D98142 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				D039B4B71BF4D7950024005F /* Products */,
 				D039B4C01BF4D7950024005F /* Assets.xcassets */,
 				D039B4C51BF4D7950024005F /* Info.plist */,
+				D0B2C69B1FCB403700ACBC9C /* Stdcomments.swift */,
+				D039B4B71BF4D7950024005F /* Products */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				D0B2C69A1FCB3E7C00ACBC9C /* UICustomTableViewHandler.swift in Sources */,
 				D039B4BC1BF4D7950024005F /* ViewController.swift in Sources */,
 				D039B4BA1BF4D7950024005F /* AppDelegate.swift in Sources */,
+				D0B2C69C1FCB403700ACBC9C /* Stdcomments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
