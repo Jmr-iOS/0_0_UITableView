@@ -46,15 +46,39 @@ class BigTableDemo : NSObject {
     /********************************************************************************************************************************/
     class func genBigTable(view : UIView) {
         
-        //create the table
+        //Locals
+        let verbose  : Bool = true;
+        let numRows  : Int  = 10;
         
-        //create rows
+        var bigTable : BigTableView;
+        var bigTableHandler : BigTableViewHandler;
         
-        //create cols
         
-        //make selectable
+        if(verbose){ print("BigTableDemo.genBigTable():      adding a big table"); }
         
-        //make subviews
+        bigTable = BigTableView(frame:view.frame, style:UITableViewStyle.plain, numRows:numRows);
+        
+        //add the handler
+        bigTableHandler = BigTableViewHandler(numRows:numRows, table: bigTable);
+        
+        bigTable.delegate   = bigTableHandler;                                          /* Set both to handle clicks & provide data */
+        bigTable.dataSource = bigTableHandler;
+        
+        //init the table
+        bigTable.separatorColor = UIColor.green;
+        bigTable.separatorStyle = .singleLine;
+        
+        //Safety
+        bigTable.backgroundColor = UIColor.gray;
+
+        //Set the row height
+        bigTable.rowHeight = 75;
+        
+        if(verbose){ print("BigTableDemo.genBigTable():      it was shown"); }
+        
+        view.addSubview(bigTable);
+        
+        bigTable.reloadData();
         
         return;
     }

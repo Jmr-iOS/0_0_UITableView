@@ -45,11 +45,11 @@ enum Mode {
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var verbose : Bool = false;
+    var verbose : Bool = true;
 
     let numItems_init  : Int = 16;
     
-    let mode : Mode = .MODE_CUSTOM;
+    let mode : Mode = .MODE_BIG;
     
     var items: [String]!;
     
@@ -88,7 +88,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             case .MODE_BIG:
                 self.addBigTable();
                 break;
-            
         }
         
         //Exit
