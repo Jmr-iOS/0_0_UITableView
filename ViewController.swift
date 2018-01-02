@@ -6,7 +6,7 @@
  *
  *  @author     Justin Reina, Firmware Engineer, Jaostech
  *  @created    11/5/17
- *  @last rev   12/30/17
+ *  @last rev   1/2/18
  *
  *  @section    Description
  *      to be listed
@@ -118,6 +118,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return;
     }
 
+    
     /********************************************************************************************************************************/
     /** @fcn        addCustomTable()
      *  @brief      x
@@ -126,7 +127,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     /********************************************************************************************************************************/
     func addCustomTable() {
 
-        if(verbose){ print("ViewController.addCustomTable():      adding a custom table"); }
+        if(verbose){ print("ViewController.addCustomTable():    adding a custom table"); }
         
         //Init Table
         customTable = UICustomTableView(frame:self.view.frame, style:UITableViewStyle.plain);
@@ -147,7 +148,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //Set the row height
         customTable.rowHeight = 75;
      
-        if(verbose){ print("ViewController.addCustomTable():      it was shown"); }
+        if(verbose){ print("ViewController.addCustomTable():    it was shown"); }
         
         self.view.addSubview(customTable);
         
@@ -205,7 +206,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     /********************************************************************************************************************************/
     func loadItems() {
 
-        if(verbose){ print("ViewController.loadItems():    Items are loaded"); }
+        if(verbose){ print("ViewController.loadItems():         items are loaded"); }
         
         self.items = [String]();
         

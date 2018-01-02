@@ -19,7 +19,6 @@
 		D0608FE61FF7FDF70085BC2D /* UICustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0608FE31FF7FDF70085BC2D /* UICustomTableView.swift */; };
 		D0608FE71FF7FDF70085BC2D /* UICustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0608FE41FF7FDF70085BC2D /* UICustomTableViewCell.swift */; };
 		D0608FE81FF7FDF70085BC2D /* UICustomTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0608FE51FF7FDF70085BC2D /* UICustomTableViewHandler.swift */; };
-		D0608FED1FF7FE5B0085BC2D /* 0_0 - UITableView.app in Resources */ = {isa = PBXBuildFile; fileRef = D0608FEC1FF7FE5B0085BC2D /* 0_0 - UITableView.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,11 +33,11 @@
 		D0608FD81FF7FDA80085BC2D /* BigTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BigTableView.swift; path = ../BigTable/BigTableView.swift; sourceTree = "<group>"; };
 		D0608FDD1FF7FDB40085BC2D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		D0608FDE1FF7FDB40085BC2D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
-		D0608FE11FF7FDCC0085BC2D /* 0_0 - UITableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "0_0 - UITableView.app"; path = "/Users/justin/Documents/MyWorkspaces/iOS/Programmatic UI/0_0_UITableView/Base/build/Debug-iphoneos/0_0 - UITableView.app"; sourceTree = "<absolute>"; };
 		D0608FE31FF7FDF70085BC2D /* UICustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICustomTableView.swift; path = "../../../../../Ref/Libraries/Programmatic UI/UICustomTableView.swift"; sourceTree = "<group>"; };
 		D0608FE41FF7FDF70085BC2D /* UICustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICustomTableViewCell.swift; path = "../../../../../Ref/Libraries/Programmatic UI/UICustomTableViewCell.swift"; sourceTree = "<group>"; };
 		D0608FE51FF7FDF70085BC2D /* UICustomTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICustomTableViewHandler.swift; path = "../../../../../Ref/Libraries/Programmatic UI/UICustomTableViewHandler.swift"; sourceTree = "<group>"; };
-		D0608FEC1FF7FE5B0085BC2D /* 0_0 - UITableView.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = "0_0 - UITableView.app"; sourceTree = "<group>"; };
+		D0A5BDEF1FFBF346003CBB9C /* 0_0 - UITableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "0_0 - UITableView.app"; path = "/Users/justin/Documents/MyWorkspaces/iOS/Programmatic UI/0_0_UITableView/Base/build/Debug-iphoneos/0_0 - UITableView.app"; sourceTree = "<absolute>"; };
+		D0A5BDF11FFBF377003CBB9C /* 0_0 - UITableView.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = "0_0 - UITableView.app"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +104,7 @@
 		D0608FEE1FF7FE5E0085BC2D /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				D0608FEC1FF7FE5B0085BC2D /* 0_0 - UITableView.app */,
+				D0A5BDF11FFBF377003CBB9C /* 0_0 - UITableView.app */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -127,7 +126,7 @@
 			);
 			name = "0_0 - UITableView";
 			productName = "0_0 - UITableView";
-			productReference = D0608FE11FF7FDCC0085BC2D /* 0_0 - UITableView.app */;
+			productReference = D0A5BDEF1FFBF346003CBB9C /* 0_0 - UITableView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +175,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0608FED1FF7FE5B0085BC2D /* 0_0 - UITableView.app in Resources */,
 				D0608FD11FF7FD860085BC2D /* Assets.xcassets in Resources */,
 				D0608FD01FF7FD860085BC2D /* Base.lproj in Resources */,
 			);
