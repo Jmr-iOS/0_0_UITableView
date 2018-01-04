@@ -6,10 +6,7 @@
  *
  *  @author     Justin Reina, Firmware Engineer, Jaostech
  *  @created    11/5/17
- *  @last rev   1/2/18
- *
- *  @section    Description
- *      to be listed
+ *  @last rev   1/4/18
  *
  *  @section    Instructions
  *      There are a few options:
@@ -26,8 +23,8 @@
  *      (table re-ordering) http://swiftdeveloperblog.com/uitableviewcontroller-rearrange-or-reorder-table-cells-example-in-swift/
  *
  *  @section    Opens
- *      fix the fade transition in std remove to "fade to beneath the table"
- *      list description in file header
+ *      fix fade transition in std remove to "fade to beneath the table"
+ *      fix bug where multiple nearby selections in table causes nil cell text
  *      BigTableDemo complete
  *
  *  @section    Legal Disclaimer
@@ -50,7 +47,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     let numItems_init  : Int = 16;
     
-    let mode : Mode = .MODE_CUSTOM;
+    let mode : Mode = .MODE_DIRECT;
     
     var items: [String]!;
     
@@ -225,10 +222,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     /** @fcn        getCharName(_ i : Int) -> String
      *  @brief      x
      *  @details    x
+     *  @note       using previous value returned Optional String and unsure why
      */
     /********************************************************************************************************************************/
     func getCharName(_ i : Int) -> String {
-        return String(describing: UnicodeScalar(i + Int(("A" as UnicodeScalar).value)));
+        let chars : [String] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+                                "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+        
+        return chars[i%chars.count];
     }
     
     
