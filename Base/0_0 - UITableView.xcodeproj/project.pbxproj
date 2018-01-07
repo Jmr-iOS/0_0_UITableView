@@ -36,7 +36,8 @@
 		D0608FE31FF7FDF70085BC2D /* UICustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICustomTableView.swift; path = "../../../../../Ref/Libraries/Programmatic UI/UICustomTableView.swift"; sourceTree = "<group>"; };
 		D0608FE41FF7FDF70085BC2D /* UICustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICustomTableViewCell.swift; path = "../../../../../Ref/Libraries/Programmatic UI/UICustomTableViewCell.swift"; sourceTree = "<group>"; };
 		D0608FE51FF7FDF70085BC2D /* UICustomTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICustomTableViewHandler.swift; path = "../../../../../Ref/Libraries/Programmatic UI/UICustomTableViewHandler.swift"; sourceTree = "<group>"; };
-		D0A5BDEF1FFBF346003CBB9C /* 0_0 - UITableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "0_0 - UITableView.app"; path = "/Users/justin/Documents/MyWorkspaces/iOS/Programmatic UI/0_0_UITableView/Base/build/Debug-iphoneos/0_0 - UITableView.app"; sourceTree = "<absolute>"; };
+		D07CE09E20029307001BF472 /* 0_0 - UITableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "0_0 - UITableView.app"; path = "/Users/justin/Documents/MyWorkspaces/iOS/Programmatic UI/0_0 - UITableView/Base/build/Debug-iphoneos/0_0 - UITableView.app"; sourceTree = "<absolute>"; };
+		D07CE09F20029333001BF472 /* 0_0 - UITableView.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = "0_0 - UITableView.app"; path = "../../../../../../../Library/Developer/Xcode/DerivedData/0_0_-_UITableView-dkirpibietlftefdepnyroyukdyy/Build/Products/Debug-iphonesimulator/0_0 - UITableView.app"; sourceTree = "<group>"; };
 		D0A5BDF11FFBF377003CBB9C /* 0_0 - UITableView.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = "0_0 - UITableView.app"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +105,7 @@
 		D0608FEE1FF7FE5E0085BC2D /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				D07CE09F20029333001BF472 /* 0_0 - UITableView.app */,
 				D0A5BDF11FFBF377003CBB9C /* 0_0 - UITableView.app */,
 			);
 			path = Product;
@@ -126,7 +128,7 @@
 			);
 			name = "0_0 - UITableView";
 			productName = "0_0 - UITableView";
-			productReference = D0A5BDEF1FFBF346003CBB9C /* 0_0 - UITableView.app */;
+			productReference = D07CE09E20029307001BF472 /* 0_0 - UITableView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

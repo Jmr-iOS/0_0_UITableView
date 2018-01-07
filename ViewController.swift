@@ -6,7 +6,7 @@
  *
  *  @author     Justin Reina, Firmware Engineer, Jaostech
  *  @created    11/5/17
- *  @last rev   1/4/18
+ *  @last rev   1/7/18
  *
  *  @section    Instructions
  *      There are a few options:
@@ -161,16 +161,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     /********************************************************************************************************************************/
     func addStandardTable() {
 
-        if(verbose){ print("ViewController.addStandardTable():      adding a standard table"); }
+        if(verbose){ print("ViewController.addStandardTable():  adding a standard table"); }
 
         //Init
         tableView = UITableView(frame:self.view.frame);
 
-        tableView.delegate = self;                                                              //Set both to handle clicks & provide data
+        tableView.delegate = self;                                                  /* Set both to handle clicks & provide data     */
         tableView.dataSource = self;
 
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell");          //I have no idea why we do this
-        tableView.translatesAutoresizingMaskIntoConstraints = false;                            //Std
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell");   /* I have no idea why we do this                */
+        tableView.translatesAutoresizingMaskIntoConstraints = false;                /* Std                                          */
 
         tableView.separatorColor = (cellBordersVisible) ? UIColor.green : UIColor.clear;
         tableView.separatorStyle = (cellBordersVisible) ? .singleLine : .none;
@@ -181,7 +181,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //Set the row height
         tableView.rowHeight = 75;
 
-        if(verbose){ print("ViewController.addStandardTable():      it was shown"); }
+        if(verbose){ print("ViewController.addStandardTable():  it was shown"); }
 
         //Add it!
         self.view.addSubview(tableView);
@@ -246,7 +246,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     /********************************************************************************************************************************/
     /** @fcn        addNewRow()
-     *  @brief      x
+     *  @brief      add a row to the table
      *  @details    x
      */
     /********************************************************************************************************************************/
@@ -266,7 +266,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     /********************************************************************************************************************************/
     /** @fcn        removeLastRow(_ useFadeAndSlide : Bool)
-     *  @brief      x
+     *  @brief      remove the last row from the table with animation
      *  @details    x
      */
     /********************************************************************************************************************************/
@@ -315,7 +315,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     /********************************************************************************************************************************/
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if(verbose){ print("ViewController.tableView():         The table will now have \(items.count), cause I just said so..."); }
+        if(verbose){ print("ViewController.tableView():         the table will now have \(items.count), cause I just said so..."); }
         
         return items.count;                                                         //return how many rows you want printed....!
     }
@@ -329,7 +329,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     /********************************************************************************************************************************/
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        if(verbose){ print("ViewController.tableView():         adding a cell"); }
+        if(verbose){ print("ViewController.tableView(cFR):      adding a cell"); }
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as UITableViewCell!;
         
@@ -346,9 +346,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell?.selectionStyle = UITableViewCellSelectionStyle.none;
         }
 
-
-        
-        if(verbose){ print("'\(newTextValue)' was added to the table"); }
+        if(verbose){ print("ViewController.tableView(cFR):      adding a custom table'\(newTextValue)' was added to the table"); }
         
         return cell!;
     }
@@ -362,14 +360,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     /********************************************************************************************************************************/
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
-        if(verbose){ print("ViewController.tableView():         handling a cell tap of \((indexPath as NSIndexPath).item)"); }
+        if(verbose){ print("ViewController.tableView(dSR):      handling a cell tap of \((indexPath as NSIndexPath).item)"); }
 
         tableView.deselectRow(at: indexPath, animated:true);
 
         let currCell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell") as UITableViewCell!;
         
-        if(verbose){ print("Hello Standard Cell at index \(indexPath)- '\(currCell.textLabel!.text!)'"); }
-
+        if(verbose){ print("ViewController.tableView(dSR):      hello standard cell at index \(indexPath)- '\(currCell.textLabel!.text!)'"); }
         
         
         /****************************************************************************************************************************/
@@ -377,35 +374,35 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         /****************************************************************************************************************************/
         switch((indexPath as NSIndexPath).row) {
         case (0):
-            print("top selected. Scrolling to the bottom!");
+            print("ViewController.tableView(dSR):      top selected. Scrolling to the bottom!");
             tableView.scrollToRow(at: IndexPath(row: items.count-1, section: 0), at: UITableViewScrollPosition.bottom, animated: true);
             break;
         case (1):
-            print("scrolling to the top with a Rect and no fade");
+            print("ViewController.tableView(dSR):      scrolling to the top with a Rect and no fade");
             tableView.scrollRectToVisible(CGRect(x: 0,y: 0,width: 1,height: 1), animated:false);          //immediate scroll to top
             break;
         case (2):
-            print("scrolling to the top with scrollToRowAtIndexPath");
+            print("ViewController.tableView(dSR):      scrolling to the top with scrollToRowAtIndexPath");
             tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: UITableViewScrollPosition.top, animated: true);
             break;
         case (3):
-            print("adding a new row");
+            print("ViewController.tableView(dSR):      adding a new row");
             self.addNewRow();
             break;
         case (4):
-            print("removing last row");
+            print("ViewController.tableView(dSR):      removing last row");
             self.removeLastRow(true);
             break;
         case (self.items.count-2):
-            print("turning on re-ordering");
+            print("ViewController.tableView(dSR):      turning on re-ordering");
             self.setReordering();
             break;
         case (self.items.count-1):
-            print("scrolling to the top with a Rect and fade");
+            print("ViewController.tableView(dSR):      scrolling to the top with a Rect and fade");
             tableView.scrollRectToVisible(CGRect(x: 0,y: 0,width: 1,height: 1), animated:true);           //slow scroll to top
             break;
         default:
-            print("I didn't program a reaction for this case. I was lazy...");
+            print("ViewController.tableView(dSR):      I didn't program a reaction for this case. I was lazy...");
             break;
         }
         
