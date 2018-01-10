@@ -6,7 +6,7 @@
  *
  *  @author     Justin Reina, Firmware Engineer, Jaostech
  *  @created    11/5/17
- *  @last rev   1/7/18
+ *  @last rev   1/10/18
  *
  *  @section    Instructions
  *      There are a few options:
@@ -40,14 +40,14 @@ enum Mode {
     case MODE_BIG;
 }
 
+//Demo Mode
+let mode : Mode = .MODE_CUSTOM;
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var verbose : Bool = true;
 
     let numItems_init  : Int = 16;
-    
-    let mode : Mode = .MODE_DIRECT;
     
     var items: [String]!;
     
@@ -74,17 +74,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.view.translatesAutoresizingMaskIntoConstraints = false;
 
-        self.loadItems();
+        loadItems();
         
-        switch(self.mode) {
+        switch(mode) {
             case .MODE_DIRECT:
-                self.addStandardTable();
+                addStandardTable();
                 break;
             case .MODE_CUSTOM:
-                self.addCustomTable();
+                addCustomTable();
                 break;
             case .MODE_BIG:
-                self.addBigTable();
+                addBigTable();
                 break;
         }
         
@@ -139,6 +139,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         customTable.separatorColor = (cellBordersVisible) ? UIColor.green : UIColor.clear;
         customTable.separatorStyle = (cellBordersVisible) ? .singleLine : .none;
         
+        //Configure scrolling & selection
+        customTable.allowsSelection = true;
+        customTable.isScrollEnabled = true;
+        
         //Safety
         customTable.backgroundColor = UIColor.black;
         
@@ -174,6 +178,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         tableView.separatorColor = (cellBordersVisible) ? UIColor.green : UIColor.clear;
         tableView.separatorStyle = (cellBordersVisible) ? .singleLine : .none;
+
+        //Configure scrolling & selection
+        tableView.allowsSelection = false;
+        tableView.isScrollEnabled = false;
 
         //Safety
         tableView.backgroundColor = UIColor.black;
