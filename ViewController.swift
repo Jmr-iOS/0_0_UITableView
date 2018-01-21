@@ -16,11 +16,17 @@
  *      - Manual extension ()                       <- Manual creation using 'extends' for each class modified          (Rec 2)
  *
  *  @section    Ref
- *      http://viperxgames.blogspot.com/2014/11/add-uitableview-programmatically-in.html
- *      https://www.murage.ca/downcasting-in-swift-1-2-with-as-exclamation/
- *      http://www.tutorialspoint.com/ios/ios_ui_elements_tableview.htm
- *      (fade & slide) http://stackoverflow.com/questions/419472/have-a-reloaddata-for-a-uitableview-animate-when-changing
- *      (table re-ordering) http://swiftdeveloperblog.com/uitableviewcontroller-rearrange-or-reorder-table-cells-example-in-swift/
+ *		[1] https://www.hackingwithswift.com/example-code/uikit/how-to-make-uitableviewcell-separators-go-edge-to-edge
+ *      [2] http://viperxgames.blogspot.com/2014/11/add-uitableview-programmatically-in.html
+ *      [3] https://www.murage.ca/downcasting-in-swift-1-2-with-as-exclamation/
+ *      [4] http://www.tutorialspoint.com/ios/ios_ui_elements_tableview.htm
+ *      [5] (fade & slide) http://stackoverflow.com/questions/419472/have-a-reloaddata-for-a-uitableview-animate-when-changing
+ *      [6] (table re-ordering) http://swiftdeveloperblog.com/uitableviewcontroller-rearrange-or-reorder-table-cells-example-in-swift/
+ *
+ *	@section 	Cell Borders (separators, example sets edge to edge) [1]
+ *		viewDidLoad() ->  {tableView.layoutMargins = UIEdgeInsets.zero; 
+ *						   tableView.separatorInset = UIEdgeInsets.zero;
+ *		cellForRowAt() -> {cell.layoutMargins = UIEdgeInsets.zero}
  *
  *  @section    Opens
  *      fix fade transition in std remove to "fade to beneath the table"
